@@ -20,6 +20,8 @@ namespace PPForestTrn.Hack
         private void Update()
         {
             menuMgr.onUpdate();
+            ModMgr.Instance.onUpdate();
+            EventMgr.Instance.onUpdate();
         }
 
         private void OnGUI()
@@ -28,6 +30,7 @@ namespace PPForestTrn.Hack
             GUI.Label(new Rect(10, 10, 130, 20), "PiratePerfection.com");
             GUI.color = new Color(255, 255, 255);
             menuMgr.onGUI();
+            EventMgr.Instance.onRender();
         }
     }
 }

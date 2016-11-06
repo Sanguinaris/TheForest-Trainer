@@ -1,6 +1,0 @@
-c:\users\sangu\documents\visual studio 2015\Projects\PPForestTrn\PPForestTrn\bin\Release\PPForestTrn.dll
-c:\users\sangu\documents\visual studio 2015\Projects\PPForestTrn\PPForestTrn\bin\Release\PPForestTrn.pdb
-c:\users\sangu\documents\visual studio 2015\Projects\PPForestTrn\PPForestTrn\bin\Release\UnityEngine.dll
-c:\users\sangu\documents\visual studio 2015\Projects\PPForestTrn\PPForestTrn\bin\Release\UnityEngine.xml
-c:\users\sangu\documents\visual studio 2015\Projects\PPForestTrn\PPForestTrn\obj\Release\PPForestTrn.dll
-c:\users\sangu\documents\visual studio 2015\Projects\PPForestTrn\PPForestTrn\obj\Release\PPForestTrn.pdb

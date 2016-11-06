@@ -16,6 +16,8 @@ namespace PPForestTrn.Hack.Managers
         public MenuMgr()
         {
             menuList.Add(new PlayerMenu());
+            menuList.Add(new InventoryMenu());
+            menuList.Add(new WorldMenu());
         }
 
         public void onStart()
@@ -25,6 +27,10 @@ namespace PPForestTrn.Hack.Managers
                 menu.onStart();
             }
         }
+
+        bool wasMenuOn = false;
+        bool hadUnlockedView = false;
+       // float oldTime = 1;
 
         public void onUpdate()
         {
@@ -44,6 +50,63 @@ namespace PPForestTrn.Hack.Managers
             if(Input.GetKeyDown(KeyCode.Escape))
             {
                 curActiveMenu = -1;
+            }
+
+            if(curActiveMenu >= 0)
+            {
+                // if (TheForest.Utils.LocalPlayer.Inventory.CurrentView != TheForest.Items.Inventory.PlayerInventory.PlayerViews.Pause)
+                // {
+                //oldView = TheForest.Utils.LocalPlayer.Inventory.CurrentView;
+                //TheForest.Utils.LocalPlayer.Inventory.CurrentView = TheForest.Items.Inventory.PlayerInventory.PlayerViews.Pause;
+                wasMenuOn = true;
+                if (TheForest.Utils.Input.IsMouseLocked)
+                {
+                    TheForest.Utils.LocalPlayer.FpCharacter.LockView(true);
+                    TheForest.Utils.LocalPlayer.Create.CloseBuildMode();
+                    if (!BoltNetwork.isRunning)
+                    {
+                        Time.timeScale = 0f;
+                    }
+
+                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
+                    TheForest.Utils.Scene.HudGui.GuiCam.SetActive(false);
+
+
+                    hadUnlockedView = true;
+                    /*TheForest.Utils.Input.UnLockMouse();
+                    hadUnlockedView = true;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
+                    TheForest.Utils.LocalPlayer.FpCharacter.LockView(true);
+                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
+                    oldTime = Time.timeScale;
+                    Time.timeScale = 0f;*/
+                }
+                //}
+            }else if(wasMenuOn)
+            {
+                // TheForest.Utils.LocalPlayer.Inventory.CurrentView = oldView;
+                wasMenuOn = false;
+                if (hadUnlockedView)
+                {
+                    TheForest.Utils.LocalPlayer.FpCharacter.UnLockView();
+                    TheForest.Utils.Scene.HudGui.CheckHudState();
+                    Time.timeScale = 1f;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = false;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = false;
+                    TheForest.Utils.Scene.HudGui.CheckHudState();
+
+
+                    hadUnlockedView = false;
+                   /* TheForest.Utils.Input.LockMouse();
+                    TheForest.Utils.LocalPlayer.FpCharacter.UnLockView();
+                    hadUnlockedView = false;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = false;
+                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = false;
+                    Time.timeScale = oldTime;*/
+                }
             }
         }
 

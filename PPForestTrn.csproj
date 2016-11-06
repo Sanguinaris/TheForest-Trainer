@@ -30,6 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\The Forest\TheForest_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\The Forest\TheForest_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="bolt, Version=0.4.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\The Forest\TheForest_Data\Managed\bolt.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,10 +56,24 @@
   <ItemGroup>
     <Compile Include="HackCtor.cs" />
     <Compile Include="Hack\Base.cs" />
+    <Compile Include="Hack\Managers\EventMgr.cs" />
     <Compile Include="Hack\Managers\MenuMgr.cs" />
+    <Compile Include="Hack\Menus\InventoryMenu.cs" />
     <Compile Include="Hack\Menus\Menu.cs" />
     <Compile Include="Hack\Menus\PlayerMenu.cs" />
-    <Compile Include="Hack\Mods\PlayerMods.cs" />
+    <Compile Include="Hack\Managers\ModMgr.cs" />
+    <Compile Include="Hack\Menus\WorldMenu.cs" />
+    <Compile Include="Hack\Mods\InventoryMods\InfiniteSpace.cs" />
+    <Compile Include="Hack\Mods\WorldMods\ESP.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\GodMode.cs" />
+    <Compile Include="Hack\Mods\Module.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\HighJump.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\InfiniteStamina.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\NoFallDamage.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\NoStarvation.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\NoThirst.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\SpeedHack.cs" />
+    <Compile Include="Hack\Mods\WorldMods\KillAll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
