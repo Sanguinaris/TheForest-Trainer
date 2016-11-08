@@ -66,28 +66,17 @@ namespace PPForestTrn.Hack.Managers
                     if (!BoltNetwork.isRunning)
                     {
                         Time.timeScale = 0f;
+                        TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
+                        TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
                     }
 
-                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
-                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
                     TheForest.Utils.Scene.HudGui.GuiCam.SetActive(false);
 
 
                     hadUnlockedView = true;
-                    /*TheForest.Utils.Input.UnLockMouse();
-                    hadUnlockedView = true;
-                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
-                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
-                    TheForest.Utils.LocalPlayer.FpCharacter.LockView(true);
-                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
-                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
-                    oldTime = Time.timeScale;
-                    Time.timeScale = 0f;*/
                 }
-                //}
             }else if(wasMenuOn)
             {
-                // TheForest.Utils.LocalPlayer.Inventory.CurrentView = oldView;
                 wasMenuOn = false;
                 if (hadUnlockedView)
                 {
@@ -100,12 +89,6 @@ namespace PPForestTrn.Hack.Managers
 
 
                     hadUnlockedView = false;
-                   /* TheForest.Utils.Input.LockMouse();
-                    TheForest.Utils.LocalPlayer.FpCharacter.UnLockView();
-                    hadUnlockedView = false;
-                    TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = false;
-                    TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = false;
-                    Time.timeScale = oldTime;*/
                 }
             }
         }

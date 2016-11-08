@@ -22,6 +22,12 @@ namespace PPForestTrn.Hack.Mods.WorldMods
         public override void onButtonPress()
         {
             TheForest.Utils.Scene.MutantControler.activeCannibals.Clear();
+            TheForest.Utils.Scene.MutantControler.activeBabies.Clear();
+            TheForest.Utils.Scene.MutantControler.activeCaveCannibals.Clear();
+            TheForest.Utils.Scene.MutantControler.activeFamilies.Clear();
+            TheForest.Utils.Scene.MutantControler.activeInstantSpawnedCannibals.Clear();
+            TheForest.Utils.Scene.MutantControler.activeWorldCannibals.Clear();
+            TheForest.Utils.Scene.MutantControler.disableAllEnemies = true;
         }
     }
 }

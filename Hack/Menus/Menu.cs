@@ -28,6 +28,8 @@ namespace PPForestTrn.Hack.Menus
 
         private float scrollValue = 0;
 
+
+
         public virtual void drawGui() {
             resetDrawMath();
             GUI.Box(new Rect(curX - 10, 0, normWidth + 10, Screen.height), this.getMenuName());
@@ -75,7 +77,7 @@ namespace PPForestTrn.Hack.Menus
 
         //Drawing Stuff
         protected float curX = 0, curY = 0, normPad = 0, normWidth = 0, normHeight = 0, oldY = 0;
-        protected void resetDrawMath() { oldY = curY; curX = Screen.width * 3 / 8;  curY = 0; normPad = Screen.width / 100; normWidth = Screen.width / 4; normHeight = Screen.height / 5; }
-        protected void incrementY(int divider) { curY += Screen.height / 5 / divider + normPad; }
+        protected void resetDrawMath() { oldY = curY; curX = Screen.width * 3 / 8;  curY = 0; normPad = Screen.height / 100; normWidth = Screen.width / 4; normHeight = Screen.height / 5; }
+        protected void incrementY(int divider) { curY += normHeight / divider + normPad; }
     }
 }

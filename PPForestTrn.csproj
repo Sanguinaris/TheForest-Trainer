@@ -64,6 +64,12 @@
     <Compile Include="Hack\Managers\ModMgr.cs" />
     <Compile Include="Hack\Menus\WorldMenu.cs" />
     <Compile Include="Hack\Mods\InventoryMods\InfiniteSpace.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\Fly.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\InfiniteArmour.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\InfiniteOxygen.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\InfiniteSanity.cs" />
+    <Compile Include="Hack\Mods\PlayerMods\NoClip.cs" />
+    <Compile Include="Hack\Mods\WorldMods\CaveLight.cs" />
     <Compile Include="Hack\Mods\WorldMods\ESP.cs" />
     <Compile Include="Hack\Mods\PlayerMods\GodMode.cs" />
     <Compile Include="Hack\Mods\Module.cs" />
