@@ -54,13 +54,17 @@ namespace PPForestTrn.Hack.Managers
             moduleList.Add(new HighJump());
             moduleList.Add(new ESP());
             moduleList.Add(new InfiniteSpace());
-            moduleList.Add(new KillAll());
+            moduleList.Add(new OneHitKill());
             moduleList.Add(new InfiniteArmour());
             moduleList.Add(new InfiniteOxygen());
             moduleList.Add(new InfiniteSanity());
             moduleList.Add(new NoClip());
             moduleList.Add(new Fly());
-            moduleList.Add(new CaveLight());
+            moduleList.Add(new AutoComplete());
+            moduleList.Add(new CutMuffukinTrees());
+            moduleList.Add(new AddToInv());
+            moduleList.Add(new InstantTree());
+            moduleList.Add(new UnlimitedAttachments());
         }
 
         private void dispatchKeyEvents()

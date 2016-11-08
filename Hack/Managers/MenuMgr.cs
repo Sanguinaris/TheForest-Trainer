@@ -69,7 +69,6 @@ namespace PPForestTrn.Hack.Managers
                         TheForest.Utils.LocalPlayer.PauseMenuBlur.enabled = true;
                         TheForest.Utils.LocalPlayer.PauseMenuBlurPsCam.enabled = true;
                     }
-
                     TheForest.Utils.Scene.HudGui.GuiCam.SetActive(false);
 
 

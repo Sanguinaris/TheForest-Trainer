@@ -63,13 +63,16 @@
     <Compile Include="Hack\Menus\PlayerMenu.cs" />
     <Compile Include="Hack\Managers\ModMgr.cs" />
     <Compile Include="Hack\Menus\WorldMenu.cs" />
+    <Compile Include="Hack\Mods\InventoryMods\AddToInv.cs" />
     <Compile Include="Hack\Mods\InventoryMods\InfiniteSpace.cs" />
+    <Compile Include="Hack\Mods\InventoryMods\UnlimitedAttachments.cs" />
     <Compile Include="Hack\Mods\PlayerMods\Fly.cs" />
     <Compile Include="Hack\Mods\PlayerMods\InfiniteArmour.cs" />
     <Compile Include="Hack\Mods\PlayerMods\InfiniteOxygen.cs" />
     <Compile Include="Hack\Mods\PlayerMods\InfiniteSanity.cs" />
     <Compile Include="Hack\Mods\PlayerMods\NoClip.cs" />
-    <Compile Include="Hack\Mods\WorldMods\CaveLight.cs" />
+    <Compile Include="Hack\Mods\WorldMods\AutoComplete.cs" />
+    <Compile Include="Hack\Mods\WorldMods\CutMuffukinTrees.cs" />
     <Compile Include="Hack\Mods\WorldMods\ESP.cs" />
     <Compile Include="Hack\Mods\PlayerMods\GodMode.cs" />
     <Compile Include="Hack\Mods\Module.cs" />
@@ -79,7 +82,8 @@
     <Compile Include="Hack\Mods\PlayerMods\NoStarvation.cs" />
     <Compile Include="Hack\Mods\PlayerMods\NoThirst.cs" />
     <Compile Include="Hack\Mods\PlayerMods\SpeedHack.cs" />
-    <Compile Include="Hack\Mods\WorldMods\KillAll.cs" />
+    <Compile Include="Hack\Mods\WorldMods\InstantTree.cs" />
+    <Compile Include="Hack\Mods\WorldMods\OneHitKill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

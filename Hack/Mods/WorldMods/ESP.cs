@@ -25,7 +25,7 @@ namespace PPForestTrn.Hack.Mods.WorldMods
             EventMgr.Instance.deleteEventListener(EventNames.onUpdate, this);
         }
 
-        public Color color = Color.green;
+        public Color color = Color.red;
 
         public override void onUpdate()
         {
@@ -37,6 +37,26 @@ namespace PPForestTrn.Hack.Mods.WorldMods
         void CalcPositons()
         {
             foreach (GameObject cannibals in TheForest.Utils.Scene.MutantControler.activeWorldCannibals)
+            {
+                DrawLine(TheForest.Utils.LocalPlayer.Transform.position, cannibals.transform.position, color, 0.03f);
+            }
+            foreach (GameObject cannibals in TheForest.Utils.Scene.MutantControler.activeBabies)
+            {
+                DrawLine(TheForest.Utils.LocalPlayer.Transform.position, cannibals.transform.position, color, 0.03f);
+            }
+            foreach (GameObject cannibals in TheForest.Utils.Scene.MutantControler.activeCannibals)
+            {
+                DrawLine(TheForest.Utils.LocalPlayer.Transform.position, cannibals.transform.position, color, 0.03f);
+            }
+            foreach (GameObject cannibals in TheForest.Utils.Scene.MutantControler.activeFamilies)
+            {
+                DrawLine(TheForest.Utils.LocalPlayer.Transform.position, cannibals.transform.position, color, 0.03f);
+            }
+            foreach (GameObject cannibals in TheForest.Utils.Scene.MutantControler.activeInstantSpawnedCannibals)
+            {
+                DrawLine(TheForest.Utils.LocalPlayer.Transform.position, cannibals.transform.position, color, 0.03f);
+            }
+            foreach (GameObject cannibals in TheForest.Utils.Scene.MutantControler.activeSkinnyCannibals)
             {
                 DrawLine(TheForest.Utils.LocalPlayer.Transform.position, cannibals.transform.position, color, 0.03f);
             }
