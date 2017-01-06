@@ -8,6 +8,17 @@ using UnityEngine;
 
 namespace PPForestTrn.Hack.Mods.WorldMods
 {
+    class InstantTreeExecuter : TreeHealth
+    {
+        protected override void Hit()
+        {
+            if (InstantTree.shouldInstantChop)
+                this.Explosion(100);
+            else
+                base.Hit();
+        }
+    }
+
     class InstantTree : Module
     {
         public InstantTree() : base("Instant Chop", KeyCode.None, Categories.mWorld, GuiNames.Toggle)

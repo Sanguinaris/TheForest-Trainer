@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PPForestTrn</RootNamespace>
     <AssemblyName>PPForestTrn</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\The Forest\TheForest_Data\Managed\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ILPatcher\ILPatcher\bin\Debug\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -74,6 +76,7 @@
     <Compile Include="Hack\Mods\WorldMods\AutoComplete.cs" />
     <Compile Include="Hack\Mods\WorldMods\CutMuffukinTrees.cs" />
     <Compile Include="Hack\Mods\WorldMods\ESP.cs" />
+    <Compile Include="Hack\Mods\WorldMods\SnapLine.cs" />
     <Compile Include="Hack\Mods\PlayerMods\GodMode.cs" />
     <Compile Include="Hack\Mods\Module.cs" />
     <Compile Include="Hack\Mods\PlayerMods\HighJump.cs" />

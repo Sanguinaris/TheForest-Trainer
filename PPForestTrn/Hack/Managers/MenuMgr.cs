@@ -10,6 +10,16 @@ namespace PPForestTrn.Hack.Managers
 {
     class MenuMgr
     {
+        static readonly MenuMgr _instance = new MenuMgr();
+
+        public static MenuMgr Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+
         private List<Menu> menuList = new List<Menu>();
         private int curActiveMenu = -1;
 

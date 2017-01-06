@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -10,27 +11,30 @@ namespace PPForestTrn.Hack
 {
     public class Base : MonoBehaviour
     {
-        MenuMgr menuMgr = new MenuMgr();
+        [DllImport("Dx11DrawingTools.dll", EntryPoint = "InitDx11")]
+        public static extern void InitDx11();
 
         private void Start()
         {
-            menuMgr.onStart();
+            MenuMgr.Instance.onStart();
         }
 
         private void Update()
         {
-            menuMgr.onUpdate();
+            MenuMgr.Instance.onUpdate();
             ModMgr.Instance.onUpdate();
             EventMgr.Instance.onUpdate();
         }
 
         private void OnGUI()
         {
-            GUI.color = new Color(255, 255, 0);
-            GUI.Label(new Rect(10, 10, 130, 20), "PiratePerfection.com");
-            GUI.color = new Color(255, 255, 255);
-            menuMgr.onGUI();
-            EventMgr.Instance.onRender();
+            MenuMgr.Instance.onGUI();
+            EventMgr.Instance.onGui();
+        }
+
+        private void OnPostRender()
+        {
+            EventMgr.Instance.onPostRender();
         }
     }
 }

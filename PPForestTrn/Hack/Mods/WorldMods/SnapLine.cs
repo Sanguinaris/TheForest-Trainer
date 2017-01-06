@@ -8,9 +8,9 @@ using UnityEngine;
 
 namespace PPForestTrn.Hack.Mods.WorldMods
 {
-    class ESP : Module
+    class SnapLine : Module
     {
-        public ESP() : base("Snap lines", UnityEngine.KeyCode.None, Categories.mWorld, GuiNames.Toggle)
+        public SnapLine() : base("Snap lines", UnityEngine.KeyCode.None, Categories.mWorld, GuiNames.Toggle)
         {
         }
 

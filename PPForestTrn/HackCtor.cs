@@ -8,6 +8,15 @@ using UnityEngine;
 
 namespace PPForestTrn
 {
+    class HackCtorExecuter : MenuMain
+    {
+        protected override void OnEnable()
+        {
+            HackCtor.Load();
+            base.OnEnable();
+        }
+    }
+
     public class HackCtor
     {
         public static bool wasInit = false;

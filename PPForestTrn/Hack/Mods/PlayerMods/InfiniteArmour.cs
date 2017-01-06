@@ -27,7 +27,7 @@ namespace PPForestTrn.Hack.Mods.PlayerMods
         public override void onUpdate()
         {
             if (!this.getState()) return;
-            TheForest.Utils.LocalPlayer.Stats.Armor = 1337;
+            TheForest.Utils.LocalPlayer.Stats.Armor = 100;
         }
     }
 }

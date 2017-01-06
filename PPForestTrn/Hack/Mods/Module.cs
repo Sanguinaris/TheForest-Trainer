@@ -32,6 +32,7 @@ namespace PPForestTrn.Hack.Mods
 
         public virtual void onUpdate() { }
         public virtual void onDraw() { }
+        public virtual void onPostRender() { }
         public virtual void onEnable() { }
         public virtual void onDisable() { }
         public virtual void onToggle() { }

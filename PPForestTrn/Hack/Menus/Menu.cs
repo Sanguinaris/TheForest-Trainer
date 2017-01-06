@@ -81,6 +81,9 @@ namespace PPForestTrn.Hack.Menus
                         break;
                 }
             }
+            GUI.color = Color.yellow;
+            GUI.Label(new Rect(15, 380, 130, 20), "PiratePerfection.com");
+            GUI.color = Color.white;
             GUI.EndGroup();
             GUI.matrix = origMatrix;
         }

@@ -8,6 +8,17 @@ using UnityEngine;
 
 namespace PPForestTrn.Hack.Mods.WorldMods
 {
+    class OneHitKillExecuter : EnemyHealth
+    {
+        protected override void Update()
+        {
+            if (OneHitKill.shouldOneHitKill)
+                this.Health = 1;
+            else
+                base.Update();
+        }
+    }
+
     class OneHitKill : Module
     {
         public OneHitKill() : base("One Hit Kills", KeyCode.K, Categories.mWorld, GuiNames.Toggle)

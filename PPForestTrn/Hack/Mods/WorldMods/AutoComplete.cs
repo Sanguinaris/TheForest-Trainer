@@ -8,6 +8,17 @@ using UnityEngine;
 
 namespace PPForestTrn.Hack.Mods.WorldMods
 {
+    class AutoCompleteExecuter : TheForest.Buildings.Creation.Craft_Structure
+    {
+        protected override void CheckNeeded()
+        {
+            if (AutoComplete.shouldAutoComplete)
+                this.Build();
+            else
+                base.CheckNeeded();
+        }
+    }
+
     class AutoComplete : Module
     {
         public AutoComplete() : base("Auto Complete", KeyCode.None, Categories.mWorld, GuiNames.Toggle)

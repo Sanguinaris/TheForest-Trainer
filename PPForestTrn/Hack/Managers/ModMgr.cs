@@ -53,6 +53,7 @@ namespace PPForestTrn.Hack.Managers
             moduleList.Add(new SpeedHack());
             moduleList.Add(new HighJump());
             moduleList.Add(new ESP());
+            moduleList.Add(new SnapLine());
             moduleList.Add(new InfiniteSpace());
             moduleList.Add(new OneHitKill());
             moduleList.Add(new InfiniteArmour());

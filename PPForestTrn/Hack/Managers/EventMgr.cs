@@ -10,7 +10,8 @@ namespace PPForestTrn.Hack.Managers
     public enum EventNames
     {
         onUpdate,
-        onRender
+        onGui,
+        onPostRender
     };
 
     class EventMgr
@@ -28,8 +29,10 @@ namespace PPForestTrn.Hack.Managers
         Dictionary<EventNames, List<Module>> eventList = new Dictionary<EventNames, List<Module>>();
 
         public EventMgr() {
-            eventList.Add(EventNames.onUpdate, new List<Module>());
-            eventList.Add(EventNames.onRender, new List<Module>());
+            foreach(EventNames ev in Enum.GetValues(typeof(EventNames)))
+            {
+                eventList.Add(ev, new List<Module>());
+            }
         }
 
         public void onUpdate()
@@ -40,11 +43,19 @@ namespace PPForestTrn.Hack.Managers
             }
         }
 
-        public void onRender()
+        public void onGui()
         {
-            foreach(Module mod in eventList[EventNames.onRender])
+            foreach(Module mod in eventList[EventNames.onGui])
             {
                 mod.onDraw();
+            }
+        }
+
+        public void onPostRender()
+        {
+            foreach (Module mod in eventList[EventNames.onPostRender])
+            {
+                mod.onPostRender();
             }
         }
 
